@@ -20,7 +20,7 @@ const defaultProps: AccountOverlyProps = {
   closeHandler: () => console.log("closing"),
 };
 
-export const Main: Story<AccountOverlyProps> = (props) => {
+export const Main: Story<AccountOverlyProps> = (props: AccountOverlyProps) => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const dragHandler: DraggableEventHandler = (_e, ui) =>
     setPosition({ x: 0, y: ui.y });

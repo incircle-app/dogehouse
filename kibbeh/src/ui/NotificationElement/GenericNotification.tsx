@@ -16,10 +16,10 @@ export const GenericNotification: React.FC<GenericNotificationProps> = ({
 }) => {
   return (
     <div className="flex items-center w-full">
-      <div className="mr-3 w-6 h-6">
+      <div className="mr-3 w-6 h-6 bg-primary-800 rounded-full items-center justify-center flex-shrink-0">
         {icon ? icon : <SolidRocket className="text-primary-300" />}
       </div>
-      <div className="flex flex-col">
+      <div className="flex flex-col mr-2">
         <div className="text-primary-100 flex-wrap">
           {notificationMsg ? notificationMsg : "you have a new notification"}
         </div>

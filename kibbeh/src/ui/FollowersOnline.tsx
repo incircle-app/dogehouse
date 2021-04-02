@@ -1,7 +1,9 @@
 import { UserWithFollowInfo } from "@dogehouse/kebab";
 import Link from "next/link";
 import React, { MouseEventHandler } from "react";
+import {SolidPlus} from "../icons";
 import { ApiPreloadLink } from "../shared-components/ApiPreloadLink";
+import {BoxedIcon} from "./BoxedIcon";
 import { SingleUser } from "./UserAvatar/SingleUser";
 
 export interface FriendOnlineType {
@@ -52,7 +54,14 @@ export const FollowersOnlineWrapper: React.FC<{
       className="pb-5 w-full flex flex-col flex-1 overflow-y-auto"
       data-testid="friends-online"
     >
+      <div className="py-2 flex justify-between items-center">
       <h4 className="text-primary-100">People</h4>
+        <Link href="/discovery">
+      <BoxedIcon style={{ height: "30px", width: "30px" }}>
+        <SolidPlus />
+      </BoxedIcon>
+        </Link>
+      </div>
       <h6 className="text-primary-300 mt-3 text-sm font-bold">
         ONLINE{" "}
         {onlineFriendCount !== undefined ? `(${onlineFriendCount})` : null}
